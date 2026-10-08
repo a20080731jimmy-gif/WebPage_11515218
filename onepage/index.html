@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="scissors咖啡，為手沖咖啡愛好者挑選當季精品咖啡豆，剪去繁複，讓每一杯都清澈、明亮、值得細品。">
-  <title>scissors咖啡｜讓風味，慢慢抵達</title>
+  <meta name="description" content="剪刀咖啡，為手沖咖啡愛好者挑選當季精品咖啡豆，剪去繁複，讓每一杯都清澈、明亮、值得細品。">
+  <title>剪刀咖啡｜讓風味，慢慢抵達</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
       --mist: #eaf5f7;
       --cream: #fbfaf6;
       --ink: #122534;
-      --muted: #285371;
+      --muted: #607482;
       --line: #d7e4e8;
       --sand: #e5b66b;
       --shadow: 0 18px 50px rgba(6, 39, 66, .13);
@@ -39,7 +39,7 @@
     button { cursor: pointer; }
     .wrap { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
     .serif { font-family: "Noto Serif TC", serif; }
-    
+
     .eyebrow {
       display: flex;
       align-items: center;
@@ -246,111 +246,42 @@
       font-size: 11px;
       letter-spacing: .1em;
     }
+
+    /* Hero 右側圖片展示區 (符合 onepage1.md 規格：使用 <img> 元素顯示 images/hero.png，400px x 300px) */
     .hero-art {
       position: relative;
       min-height: 453px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .sun {
+    .hero-art img {
+      width: 400px;
+      height: 300px;
+      object-fit: contain;
+      filter: drop-shadow(0 20px 24px rgba(1, 19, 34, .45));
+      transition: transform .3s ease;
+    }
+    .hero-art img:hover {
+      transform: translateY(-4px) scale(1.02);
+    }
+    .temp-note {
       position: absolute;
-      top: 2%;
-      right: 14%;
-      width: 166px;
-      height: 166px;
-      border-radius: 50%;
-      background: #93d6e6;
-      box-shadow: 0 0 65px rgba(145, 215, 233, .36);
-    }
-    .mountain {
-      position: absolute;
-      right: -4%;
-      bottom: 2%;
-      width: 98%;
-      height: 70%;
-      clip-path: polygon(0 73%, 23% 42%, 37% 59%, 61% 10%, 73% 29%, 84% 0, 100% 37%, 100% 100%, 0 100%);
-      background: linear-gradient(135deg, #0b7eac, #06446f 70%);
-      opacity: .85;
-    }
-    .mountain::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(155deg, transparent 38%, rgba(2, 35, 58, .72) 38.5% 100%);
-    }
-    .coffee-vessel {
-      position: absolute;
-      z-index: 2;
-      right: 17%;
-      bottom: 0;
-      width: 255px;
-      filter: drop-shadow(0 22px 21px rgba(0, 0, 0, .23));
-    }
-    .dripper {
-      position: relative;
-      width: 205px;
-      height: 132px;
-      margin: 0 auto -5px;
-      border: 4px solid #e9f8fa;
-      border-top-width: 6px;
-      border-radius: 10px 10px 44% 44%;
-      background: linear-gradient(115deg, rgba(123, 206, 225, .5), rgba(26, 118, 161, .23));
-      clip-path: polygon(0 0, 100% 0, 78% 100%, 22% 100%);
-    }
-    .dripper::after {
-      content: "";
-      position: absolute;
-      inset: 18px 16px 0;
-      border-top: 1px solid rgba(255, 255, 255, .6);
-      border-left: 1px solid rgba(255, 255, 255, .25);
-      transform: skewX(-17deg);
-    }
-    .carafe {
-      position: relative;
-      width: 170px;
-      height: 181px;
-      margin: 0 auto;
-      border: 4px solid #e9f8fa;
-      border-radius: 9px 9px 39% 39% / 9px 9px 19% 19%;
-      background: linear-gradient(90deg, rgba(110, 211, 229, .26), rgba(1, 52, 87, .52));
-    }
-    .carafe::before {
-      content: "";
-      position: absolute;
-      top: -16px;
-      left: 27px;
-      width: 108px;
-      height: 20px;
-      border: 4px solid #e9f8fa;
-      border-bottom: 0;
-      border-radius: 50% 50% 0 0;
-    }
-    .carafe::after {
-      content: "";
-      position: absolute;
-      right: 16px;
-      bottom: 24px;
-      left: 16px;
-      height: 60px;
-      border-radius: 3px 3px 26px 26px;
-      background: linear-gradient(90deg, rgba(133, 67, 26, .84), rgba(76, 33, 9, .92));
-    }
-    .art-label {
-      position: absolute;
-      z-index: 3;
-      top: 50%;
-      right: 2%;
-      width: 114px;
-      padding-left: 12px;
+      right: 0;
+      top: 48px;
       border-left: 1px solid var(--sky);
-      color: rgba(255, 255, 255, .78);
-      font-size: 10px;
-      line-height: 1.7;
-      letter-spacing: .1em;
+      padding-left: 12px;
+      color: rgba(255, 255, 255, .82);
+      font-size: 11px;
+      line-height: 1.55;
     }
-    .art-label strong {
+    .temp-note b {
       display: block;
+      font: 700 28px/1 "Playfair Display", serif;
       color: var(--sky);
-      font: 600 20px/1 "Playfair Display", serif;
+      margin-bottom: 3px;
     }
+
     .scroll-line {
       position: absolute;
       bottom: 23px;
@@ -816,16 +747,13 @@
       }
       .hero-art {
         min-height: 278px;
-        margin-top: -35px;
+        margin-top: -15px;
       }
-      .sun { right: 14%; width: 114px; height: 114px; }
-      .mountain { width: 82%; height: 92%; }
-      .coffee-vessel {
-        right: 15%;
-        transform: scale(.72);
-        transform-origin: bottom right;
+      .hero-art img {
+        width: 320px;
+        height: 240px;
       }
-      .art-label { top: 44%; right: 1%; }
+      .temp-note { right: 8%; top: 2px; }
       .intro-grid, .brew-grid { grid-template-columns: 1fr; }
       .intro-stamp { max-width: 510px; width: 100%; }
       .coffee-grid { grid-template-columns: 1fr 1fr; }
@@ -839,7 +767,11 @@
       .hero { min-height: 680px; }
       .hero-title { font-size: 40px; }
       .hero-art { min-height: 220px; }
-      .art-label { display: none; }
+      .hero-art img {
+        width: 270px;
+        height: 205px;
+      }
+      .temp-note { display: none; }
       section:not(.hero) { padding: 76px 0; }
       .stamp-circle { width: 245px; height: 245px; }
       .stamp-card { width: 185px; padding: 16px; }
@@ -885,11 +817,11 @@
   <header class="site-header" id="top">
     <div class="wrap">
       <nav class="nav" aria-label="主要導覽">
-        <a href="#top" class="brand" aria-label="回到scissors咖啡首頁">
-          <span class="brand-mark" aria-hidden="true">S</span>
+        <a href="#top" class="brand" aria-label="回到剪刀咖啡首頁">
+          <span class="brand-mark" aria-hidden="true">B</span>
           <span>
-            scissors咖啡
-            <small>SCISSORS COFFEE</small>
+            剪刀咖啡
+            <small>BLUE SKY COFFEE</small>
           </span>
         </a>
 
@@ -919,24 +851,26 @@
             讓風味，在<span class="sky-word">藍天</span>下慢慢抵達。
           </h1>
           <p class="hero-lede">
-            scissors咖啡為喜歡手沖的您，挑選值得細品的單一產區咖啡豆。從第一縷花香，到最後一口回甘，每一杯都有屬於自己的晴朗天氣。
+            剪刀咖啡為喜歡手沖的您，挑選值得細品的單一產區咖啡豆。從第一縷花香，到最後一口回甘，每一杯都有屬於自己的晴朗天氣。
           </p>
           <div class="hero-actions">
             <a href="#coffee" class="button button-primary">探索本季咖啡豆 →</a>
-            <a href="#story" class="button button-outline">認識 scissors</a>
+            <a href="#story" class="button button-outline">認識藍天</a>
           </div>
           <p class="hero-note">TAIPEI · TAIWAN · EST. 2025</p>
         </div>
 
-        <div class="hero-art" aria-hidden="true">
-          <div class="sun"></div>
-          <div class="mountain"></div>
-          <div class="coffee-vessel">
-            <div class="dripper"></div>
-            <div class="carafe"></div>
-          </div>
-          <div class="art-label">
-            <strong>92°C</strong>
+        <!-- 5.2 Hero 右欄：依據 onepage1.md 規格使用 <img> 顯示 images/hero.png (400px x 300px)，具備精緻向量備援 -->
+        <div class="hero-art reveal" aria-hidden="true">
+          <img
+            src="images/hero.png"
+            alt="剪刀咖啡主視覺"
+            width="400"
+            height="300"
+            onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 300\'%3E%3Cdefs%3E%3ClinearGradient id=\'g\' x1=\'0\' x2=\'0\' y1=\'0\' y2=\'1\'%3E%3Cstop stop-color=\'%2375c6e8\'/%3E%3Cstop offset=\'1\' stop-color=\'%230c5b95\'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx=\'285\' cy=\'70\' r=\'45\' fill=\'%23e5b66b\' opacity=\'.95\'/%3E%3Cpath d=\'M0 245 108 130l55 60 83-107 154 162z\' fill=\'url(%23g)\' opacity=\'.8\'/%3E%3Cpath d=\'M0 260 108 160l55 53 83-88 154 135z\' fill=\'%230c5b95\'/%3E%3Cpath d=\'M148 251c10-55 28-104 84-104s75 51 84 104z\' fill=\'%23fbfaf6\'/%3E%3Cpath d=\'M174 200c13-37 34-57 58-57s44 20 58 57\' fill=\'none\' stroke=\'%23fbfaf6\' stroke-width=\'10\'/%3E%3Cpath d=\'M134 251h197\' stroke=\'%2375c6e8\' stroke-width=\'4\'/%3E%3C/svg%3E';"
+          >
+          <div class="temp-note">
+            <b>92°C</b>
             理想水溫<br>細細喚醒香氣
           </div>
         </div>
@@ -956,7 +890,7 @@
             </div>
           </div>
           <div class="stamp-card">
-            <b>SCISSORS NOTE</b>
+            <b>BLUE SKY NOTE</b>
             <p>一杯好咖啡，從來不是匆忙完成的事。</p>
           </div>
         </div>
@@ -1104,10 +1038,10 @@
       <div class="footer-top">
         <div class="footer-brand">
           <div class="brand">
-            <span class="brand-mark" aria-hidden="true">S</span>
+            <span class="brand-mark" aria-hidden="true">B</span>
             <span>
-              scissors咖啡
-              <small>SCISSORS COFFEE</small>
+              剪刀咖啡
+              <small>BLUE SKY COFFEE</small>
             </span>
           </div>
           <p>為喜愛手沖咖啡的你，留下一段慢慢品味、微微放晴的時間。</p>
@@ -1125,7 +1059,7 @@
         <div>
           <p class="footer-heading">聯絡我們</p>
           <ul class="footer-list">
-            <li><a href="mailto:hello@scissors.coffee">hello@scissors.coffee</a></li>
+            <li><a href="mailto:hello@bluesky.coffee">hello@bluesky.coffee</a></li>
             <li>台中市西屯區僑光路 100 號</li>
             <li>每日 10:00 — 19:00</li>
           </ul>
@@ -1133,7 +1067,7 @@
       </div>
 
       <div class="footer-bottom">
-        <span>© 2025 scissors咖啡 (SCISSORS COFFEE). ALL RIGHTS RESERVED.</span>
+        <span>© 2025 剪刀咖啡 (BLUE SKY COFFEE). ALL RIGHTS RESERVED.</span>
         <span>BREW SLOW · LIVE BRIGHT</span>
       </div>
     </div>
