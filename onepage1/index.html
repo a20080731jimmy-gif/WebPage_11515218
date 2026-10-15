@@ -13,6 +13,7 @@
       --navy: #062742;
       --blue: #0c5b95;
       --sky: #75c6e8;
+      --scissors: #75c6e8;
       --mist: #eaf5f7;
       --cream: #fbfaf6;
       --ink: #122534;
@@ -239,7 +240,7 @@
       font: 900 clamp(42px, 5.5vw, 68px)/1.22 "Noto Serif TC", serif;
       letter-spacing: .075em;
     }
-    .hero-title .sky-word { color: var(--sky); }
+    .hero-title .scissors-word { color: var(--scissors, var(--sky)); }
     .hero-lede {
       max-width: 44ch;
       margin: 26px 0 32px;
@@ -255,7 +256,7 @@
       letter-spacing: .1em;
     }
 
-    /* Hero 右側既有圖片展示區（依據 onepage1.md 規格：寬 400px、高 300px） */
+    /* Hero 右欄既有圖片展示區（依據 onepage1.md 規格：寬 400px、高 300px） */
     .hero-art {
       position: relative;
       min-height: 380px;
@@ -848,7 +849,7 @@
         <a href="#top" class="brand" aria-label="回到藍天咖啡首頁">
           <span class="brand-mark" aria-hidden="true">B</span>
           <span>
-            藍天咖啡
+            剪刀咖啡
             <small>BLUE SKY COFFEE</small>
           </span>
         </a>
@@ -876,14 +877,14 @@
         <div class="reveal">
           <p class="eyebrow">HAND BREWED · SLOWLY ROASTED</p>
           <h1 class="hero-title" id="heroTitle">
-            讓風味，在<span class="sky-word">藍天</span>下慢慢抵達。
+            讓風味，在<span class="scissors-word">剪刀</span>下慢慢抵達。
           </h1>
           <p class="hero-lede">
-            藍天咖啡為喜歡手沖的您，挑選值得細品的單一產區咖啡豆。從第一縷花香，到最後一口回甘，每一杯都有屬於自己的晴朗天氣。
+            剪刀咖啡為喜歡手沖的您，挑選值得細品的單一產區咖啡豆。從第一縷花香，到最後一口回甘，每一杯都有屬於自己的晴朗天氣。
           </p>
           <div class="hero-actions">
             <a href="#coffee" class="button button-primary">探索本季咖啡豆 →</a>
-            <a href="#story" class="button button-outline">認識藍天</a>
+            <a href="#story" class="button button-outline">認識剪刀</a>
           </div>
           <p class="hero-note">TAIPEI · TAIWAN · EST. 2025</p>
         </div>
@@ -894,7 +895,7 @@
             <img
               class="hero-photo"
               src="images/hero.jfif"
-              alt="藍天咖啡手沖與窗景"
+              alt="剪刀咖啡手沖與窗景"
               width="400"
               height="300"
               onerror="this.onerror=null; this.src='images/hero.jpg';"
@@ -965,7 +966,7 @@
               <p class="coffee-notes">白花、佛手柑、蜂蜜</p>
               <div class="coffee-bottom">
                 <span class="price">NT$ 520 / 200g</span>
-                <button type="button" class="add-button" data-coffee="衣索比亞・耶加雪菲">加入收藏 ＋</button>
+                <button type="button" class="add-button" data-coffee="大雞巴・耶加雪菲">加入收藏 ＋</button>
               </div>
             </div>
           </article>
@@ -1071,7 +1072,7 @@
           <div class="brand">
             <span class="brand-mark" aria-hidden="true">B</span>
             <span>
-              藍天咖啡
+              剪刀咖啡
               <small>BLUE SKY COFFEE</small>
             </span>
           </div>
